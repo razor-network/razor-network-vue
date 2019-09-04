@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 import App from './App.vue'
+// routes
+import VueRouter from 'vue-router'
+import { routes } from './routes/index'
 // import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -15,10 +18,17 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 Vue.use(BootstrapVue)
+Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+})
+
 new Vue({
+  router,
   created() {
     AOS.init()
   },
