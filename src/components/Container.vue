@@ -232,133 +232,7 @@ Traditionally this is done by using a centralized entities called “Oracles”.
             data-aos="fade-down"
             data-aos-delay="0"
           >
-            <div class="accordion" id="accordionExample">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link color-main"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >What is an Oracle?</button>
-                  </h2>
-                </div>
-
-                <div
-                  id="collapseOne"
-                  class="collapse show"
-                  aria-labelledby="headingOne"
-                  data-parent="#accordionExample"
-                >
-                  <div
-                    class="card-body"
-                  >Blockchains do not have access to the data from outside the blockchain. Such data is necessary for operation of various decentralized applications. This problem is solved by an entity called an oracle.</div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed color-main"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >What is Razor Network?</button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordionExample"
-                >
-                  <div
-                    class="card-body"
-                  >Razor Network is truly decentralized oracle platform offering a high degree of decentralization and economic security.</div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header" id="headingThree">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed color-main"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >Does Razor Network have its own blockchain?</button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseThree"
-                  class="collapse"
-                  aria-labelledby="headingThree"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    Razor Network is a Proof of Stake consensus algorithm which achieves consensus on oracle values by Truth-by-consensus algorithm.
-                    Razor Network currently runs directly on Ethereum public networks. In the future, it will run on its own Proof of Stake blockchain with Honey Badger BFT Consensus algorithm.
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header" id="headingFour">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed color-main"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseFour"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                    >Does Razor Network have a Native Token?</button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseFour"
-                  class="collapse"
-                  aria-labelledby="headingFour"
-                  data-parent="#accordionExample"
-                >
-                  <div
-                    class="card-body"
-                  >Schell is the native ERC20 utility token used in Razor Network for staking purposes. It has the abbreviation SCH and symbol ʂ.</div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header" id="headingFive">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed color-main"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >How can I earn Schells?</button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseFive"
-                  class="collapse"
-                  aria-labelledby="headingFive"
-                  data-parent="#accordionExample"
-                >
-                  <div
-                    class="card-body"
-                  >Schells can be earned by becoming a staker in the network. Schells are earned in the form of block rewards in the network.</div>
-                </div>
-              </div>
-            </div>
+            <FAQ />
           </div>
         </div>
       </div>
@@ -395,8 +269,12 @@ Traditionally this is done by using a centralized entities called “Oracles”.
 </template>
 
 <script>
+import FAQ from "./FAQ";
 export default {
-  name: "container"
+  name: "container",
+  components: {
+    FAQ
+  }
 };
 </script>
 
