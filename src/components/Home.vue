@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-dark">
+  <header class="bg-dark header_2">
+    <!-- <div class="bg-dark"> -->
     <div class="mb-3 logo color-white d-block d-xl-none text-center logo_mobile">
       <a href="/">
         <img src="../i/logo3.svg" height="50px" />
@@ -13,7 +14,7 @@
     >
       Truly decentralized oracle network
       <br />for decentralized
-      <div style="display: inline-block" class="finance animated">Finance</div>
+      <div style="display: inline-block" class="animated faster" :class="classes">{{text}}</div>
       <!-- <div class="insurance">Insurance</div> -->
     </h1>
     <div class="mw-620 mx-auto mt-35 f-22 color-white op-7 text-center text-adaptive">
@@ -29,7 +30,7 @@ Traditionally this is done by using a centralized entities called “Oracles”.
 
     <!-- <form class="row align-items-center justify-content-center no-gutters mt-70" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500" method="POST" action="form-handler.php"> -->
     <form
-      class="row align-items-center justify-content-center no-gutters mt-70"
+      class="row align-items-center justify-content-center no-gutters mt-70 mb-130 text-center"
       data-aos-duration="500"
       data-aos="fade-down"
       data-aos-delay="500"
@@ -265,18 +266,68 @@ Traditionally this is done by using a centralized entities called “Oracles”.
         </div>
       </div>
     </section>
-  </div>
+    <!-- </div> -->
+  </header>
 </template>
 
 <script>
 import FAQ from "./FAQ";
+import { setInterval, setTimeout } from "timers";
 export default {
   name: "container",
   components: {
     FAQ
+  },
+  data() {
+    return {
+      text: "Finance",
+      dataText: [
+        "Finance",
+        "Prediction markets",
+        "Insurance",
+        "Synthetic assets",
+        "Stablecoins",
+        "Identity",
+        "Atomic swaps",
+        "Finance",
+        "Lending"
+      ],
+      i: 0,
+      classes: ""
+    };
+  },
+  methods: {
+    change: function() {
+      const that = this;
+      setInterval(() => {
+        if (that.i == 8) {
+          that.i = 0;
+          that.text = that.dataText[that.i];
+        } else {
+          that.i = that.i + 1;
+          that.text = that.dataText[that.i];
+        }
+        that.classes = "fadeInDown";
+      }, 1600);
+    },
+    changeClass: function() {
+      const that = this;
+      setInterval(() => {
+        that.classes = "fadeOutDown";
+      }, 1600);
+    }
+  },
+  mounted: function() {
+    this.changeClass();
+    setTimeout(() => {
+      this.change();
+    }, 600);
   }
 };
 </script>
 
 <style>
+.container1 {
+  height: 100vh;
+}
 </style>
