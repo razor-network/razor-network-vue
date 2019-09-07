@@ -1,7 +1,6 @@
 import Vue from 'vue'
 // import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 import App from './App.vue'
-import './external/jquery.min.js'
 // routes
 import VueRouter from 'vue-router'
 import { routes } from './routes/index'
@@ -18,6 +17,7 @@ import './css/style1.css'
 // import AOS (Animate on Scroll)
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import './external/main'
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
